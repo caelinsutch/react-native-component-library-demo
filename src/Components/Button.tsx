@@ -1,3 +1,4 @@
+import React from 'react';
 import { BoxProps, TextProps } from "@shopify/restyle";
 import { Theme } from "../theme";
 import { ActivityIndicator, TouchableHighlight } from "react-native";
@@ -22,6 +23,7 @@ const Button: React.FC<ButtonProps> = ({
       py="m"
       px="xl"
       backgroundColor="primary"
+      borderRadius={8}
       shadowOffset={{ height: 2, width: 0 }}
       shadowRadius={5}
       shadowColor="black"

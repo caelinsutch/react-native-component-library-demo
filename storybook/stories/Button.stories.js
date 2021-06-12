@@ -1,10 +1,9 @@
+import React from 'react';
 import { action } from '@storybook/addon-actions';
 import { text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react-native';
-import React from 'react';
-import { Text } from 'react-native';
-import Button from '.';
-import CenterView from '../CenterView';
+import { Button, Text } from '../../src/Components';
+import CenterView from './CenterView';
 
 storiesOf('Button', module)
   .addDecorator((getStory) => <CenterView>{getStory()}</CenterView>)
@@ -17,4 +16,9 @@ storiesOf('Button', module)
     <Button onPress={action('clicked-emoji')}>
       <Text>😀 😎 👍 💯</Text>
     </Button>
-  ));
+  ))
+  .add('loading', () => (
+    <Button onPress={action('loading')} loading>
+      <Text>Test</Text>
+    </Button>
+  ))
